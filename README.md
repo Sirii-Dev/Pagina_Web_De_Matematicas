@@ -3,9 +3,12 @@
 ..
 
 ##Taller 1: Figuras Geométricas
-En el primer taller calculamos el area y perimetro de algunas figuras.
-Para ello seguimos los siguentes pasos:
- -Primer paso: Definir las formulas.
- -Segundo paso: Implementar las fórmulas en JavaScript. 
- -Terecer paso: Crear funciones.
- -Cuarto paso: Integrar HTML con JS.
+En el primer taller calculamos el area y perimetro de algunas figuras como lo son
+el cuadrado, triagulo y el circulo.
+
+ ##Taller 2: Porcentajes y descuentos 
+ En el segundo taller calculamos el precion final que pagara una persona cuando
+ se le hace un descuento a su producto a traves de un cupon
+
+ ##Taller 3: Taller de promedio moda y mediana
+ En este taller ayudamos al usuario a calcular el promedio, la moda o la mediana.
