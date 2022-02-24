@@ -12,3 +12,6 @@ el cuadrado, triagulo y el circulo.
 
  ##Taller 3: Taller de promedio moda y mediana
  En este taller ayudamos al usuario a calcular el promedio, la moda o la mediana.
+
+##Taller 4: Conversor de temperaturas
+En este taller convertimos cantidades de una temperatura a otra.

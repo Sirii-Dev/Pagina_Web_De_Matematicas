@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversor de temperaturas</title>
+</head>
+<body>
+    <header>
+        Conversor de temperatura
+    </header>
+    <form action="/"></form>
+    
+    <section>
+        <label for="temperatura">Escribe el valor de la temperatura y elige si es celsius, fahrenheit o kelvin</label>
+        <input type="number" id="temperatura">
+        <select name="gradosIniciales" id="gradosIniciales" onchange="seleccion();">                
+            <option value="-"></option>
+            <option value="celsius">C°</option>
+            <option value="fahrenheit">F°</option>
+            <option value="kelvin">K°</option>
+        </select>
+    </section>
+
+    <section>
+        <label for="gradosFinales">Elige a que temperatura lo quieres pasar</label>
+        <p id="Resultado">Resultado</p>
+        <select name="gradosFinales" id="gradosFinales" onchange="tFinal();">
+            <option value="-"></option>
+            <option value="celsius">C°</option>
+            <option value="fahrenheit">F°</option>
+            <option value="kelvin">K°</option>
+        </select>
+    </section>
+
+    <button type="button" onclick="convertir()">Convertir</button>
+</form>
+</body>
+<script src="./temperatura.js"></script>
+</html>
