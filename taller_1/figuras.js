@@ -99,8 +99,10 @@ function calcularAlturaTriangulo() {
 
   if (valueA == 0) {
     altura = Math.sqrt((valueB**2) -((valueBase/2)**2));
+    altura = altura.toFixed(2);
   } else {
     altura = Math.sqrt((valueA**2) -((valueBase/2)**2));
+    altura = altura.toFixed(2);
   }
 
   let resultado= document.getElementById(
@@ -126,6 +128,7 @@ function calcularAreaCirculo(){
   let valueRadio = inputRadio.value;
 
   let resultado = areaCirculo(valueRadio);
+  resultado = resultado.toFixed(2);
 
   let inputCirculo = document.getElementById("ResultadoCirculo");
   inputCirculo.innerText = `El área del circulo es ${resultado}cm²`;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadistica</title>
+</head>
+<body>
+    <header>
+        <h1>Calculando</h1>
+        <a href="../taller_1/index.html">Geometria</a>
+        <a href="../taller_2/descuentos.html">Descuentos</a>
+        <a href="../taller_4/temperatura.html">Temperatura</a>
+      </header>
+
+      <main>
+
+        <h3>Media o Promedio</h3>
+
+    <section>
+      <form action="/">
+        <label for="InputString">Introduce el conjunto de números para calcular el promedio</label>
+        <input id="InputString" type="text" placeholder="Ej. 1, 2, 3">
+        
+        <button type="button" onclick="calcularPromedio()">Calcular</button>
+        <p id="InputButton"></p>
+      </form>
+    </section>
+
+
+    <h3>Mediana</h3>
+    <section>
+      <form action="/">
+        <label for="UserValues">Introduce tu conjunto de números para calcular la mediana</label>
+        <input id="UserValues" type="text" placeholder="Ej. 1, 2, 3">
+
+        <button type="button" onclick="calcularMediana()">Calcular</button>
+        <p id="Reslutado"></p>
+      </form>
+    </section>
+
+    
+        <h3>Moda</h3>
+      
+      <section>
+        <form action="/">
+          <label for="InputValues">Introduce tu conjunto de numeros para calcular la moda</label>
+          <input id="InputValues" type="text" placeholder="Ej. 1, 2, 3">
+  
+          <button type="button" onclick="calcularModa()">Calcular</button>
+          <p id="InputResultado"></p>
+  
+        </form>
+      </section>
+      </main>
+</body>
+<script src="./estadistica.js"></script>
+</html>

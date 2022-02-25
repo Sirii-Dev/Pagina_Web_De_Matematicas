@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porcentajes y descuentos</title>
-</head>
-<body>
-    <header><h1>Porcentajes y descuentos</h1></header>
+  </head>
+  <body>
+    
+    <header>
+      <h1>Calculando</h1>
+      <a href="../taller_1/index.html">Geometria</a>
+      <a href="../taller_3/estadistica.html">Estadistica</a>
+      <a href="../taller_4/temperatura.html">Temperatura</a>
+    </header>
 
-        <header>
-            <h2>Calcula el precio a pagar de tus productos con descuento</h2>
-        </header>
+    <main>
+      <div><h1>Porcentajes y descuentos</h1></div>
 
-        <section>
+      <header>
+        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+      </header>
+
+      <section>
         <form action="/">
-            <label for="InputPrice">Precio de tu producto:</label>
-            <input type="number" id="InputPrice">
+          <label for="InputPrice">Precio de tu producto:</label>
+          <input type="number" id="InputPrice" />
 
-            <label for="inputCoupon">Cupón</label>
-            <input type="text" id="inputCoupon" placeholder="Código de descuento">
+          <label for="inputCoupon">Cupón</label>
+          <input
+            type="text"
+            id="inputCoupon"
+            placeholder="Código de descuento"
+          />
 
-            <button type="button" onclick="onClickButtonPriceDiscount()">Calcular Precio </button>
-            <p id="ResultP"></p>
+          <button type="button" onclick="onClickButtonPriceDiscount()">
+            Calcular Precio
+          </button>
+          <p id="ResultP"></p>
 
-            <p>Usa el siguiente cupón "Al3x1a16" agrega 15% de descuento</p>
+          <p>Usa el siguiente cupón "Al3x1a16" agrega 15% de descuento</p>
         </form>
-    </section>
-</body>
-<script src="./descuentos.js"></script>
+      </section>
+    </main>
+  </body>
+  <script src="./descuentos.js"></script>
 </html>
