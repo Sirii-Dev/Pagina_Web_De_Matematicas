@@ -1,49 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Conversor de temperaturas</title>
-</head>
-<body>
-    <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de temperaturas</title>
+  </head>
+
+  <style>
+    :root {
+      --purple-nav: #6408b6;
+      --purple-cards: #8865a7;
+      --blue-cards: #66b3fa;
+      --inputs-color: #cccccc;
+      --hover-header: #e48758;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 62.5%;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    /*estilos del header*/
+    .main-container {
+      height: 100vh;
+      width: 100%;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    header nav {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      justify-content: center;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: var(--purple-nav);
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .active {
+      background-color: var(--blue-cards);
+      width: 150px;
+      text-align: center;
+      color: rgb(0, 44, 94);
+      border-radius: 20px;
+    }
+    a:hover {
+      color: var(--hover-header);
+    }
+
+    /*estilos del main*/
+    main {
+      margin-top: 30px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      width: 100%;
+      height: 100vh;
+      grid-template-areas:
+        "seccion1 seccion2"
+        "seccion1 seccion2";
+      position: relative;
+    }
+
+    .seccion-1 {
+      background-color: var(--hover-header);
+      grid-area: seccion1;
+      padding: 14px;
+      align-content: center;
+      color: white;
+    }
+
+    .seccion-2 {
+      background-color: var(--blue-cards);
+      grid-area: seccion2;
+      padding: 14px;
+      align-content: center;
+      color: white;
+    }
+
+    .title {
+      text-align: center;
+      color: white;
+      height: 40px;
+      background-color: var(--purple-nav);
+    }
+
+    .title h2 {
+      padding-top: 10px;
+    }
+
+    form {
+      width: 90%;
+      height: 290px;
+      text-align: center;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
+    form label {
+      color: white;
+      font-size: 1.3rem;
+      display: block;
+      grid-column: 1/4;
+      grid-row: 1/2;
+    }
+
+    input {
+      width: 200px;
+      height: 150px;
+      padding: 4px;
+      text-align: center;
+      background: none;
+      border-radius: 5px;
+      border: none;
+      border-bottom: 2px solid #666b6a;
+      color: #666b6a;
+      font-family: "Poppins", sans-serif;
+      outline: none;
+      font-size: 4.5rem;
+      line-height: 7.125rem;
+      display: inline;
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    select {
+      background: none;
+      border: none;
+      color: #666b6a;
+      outline: none;
+      font-size: 2rem;
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    button {
+      margin-top: 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50px;
+      padding: 0 5px 0 5px;
+      border: none;
+      grid-area: boton;
+      position: absolute;
+      grid-column: 1/3;
+      grid-row: 2/3;
+      justify-self: center;
+    }
+
+    p {
+      width: 200px;
+      height: 150px;
+      margin-left: 20px;
+      padding: 4px;
+      text-align: center;
+      background: none;
+      border-radius: 5px;
+      border: none;
+      border-bottom: 2px solid #666b6a;
+      color: #666b6a;
+      outline: none;
+      font-size: 4.5rem;
+    }
+    @media only screen and (max-width: 600px) {
+    
+      header nav {
+        width: 100%;
+        text-align: center;
+      }
+      .title{
+        width: 100%;
+      }
+      .container{
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+       grid-template-rows: 1fr 1fr auto;
+       grid-template-areas:"seccion1" "seccion2" "boton";
+      }
+      .seccion-1{
+        grid-area: seccion1;
+        width: 100%;
+      }
+    .seccion-2{
+      grid-area: seccion2;
+      width: 100%;
+    }
+    form{
+      width: 90%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(2,1fr);
+    }
+    input{
+      width: 100px;
+      height: 60px;
+      font-size: 2rem;
+    }
+    p{
+      width: 100px;
+      height: 60px;
+      font-size: 2rem;
+      line-height: 1.72rem;
+    }
+    
+    button{
+      grid-area: boton;
+      width: auto;
+      border: 1px solid #666b6a;
+      align-self: center;
+      cursor: pointer;
+      align-self: start;
+      margin-top: 8px;
+    }
+  }
+  </style>
+
+  <body>
+      <header>
         <h1>Calculando</h1>
-        <a href="../taller_1/index.html">Geometria</a>
-        <a href="../taller_2/descuentos.html">Descuentos</a>
-        <a href="../taller_3/estadistica.html">Estadistica</a>
+        <nav>
+          <div>
+            <a href="../taller_1/index.html">Geometria</a>
+            <a href="../taller_2/descuentos.html">Descuentos</a>
+          </div>
+          <div>
+            <a href="../taller_3/estadistica.html">Estadistica</a>
+            <a class="active" href="../taller_4/temperatura.html"
+              >Temperatura</a
+            >
+          </div>
+        </nav>
       </header>
 
-
       <main>
-    <div><h1>Conversor de temperatura</h1></header>
-    <form action="/"></form>
-    
-    <section>
-        <label for="temperatura">Escribe el valor de la temperatura y elige si es celsius, fahrenheit o kelvin</label>
-        <input type="number" id="temperatura">
-        <select name="gradosIniciales" id="gradosIniciales" onchange="seleccion();">                
-            <option value="-"></option>
-            <option value="celsius">C°</option>
-            <option value="fahrenheit">F°</option>
-            <option value="kelvin">K°</option>
-        </select>
-    </section>
+        <div class="title">
+          <h2>CONVERSOR DE TEMPERATURA</h2>
+        </div>
 
-    <section>
-        <label for="gradosFinales">Elige a que temperatura lo quieres pasar</label>
-        <p id="Resultado">Resultado</p>
-        <select name="gradosFinales" id="gradosFinales" onchange="tFinal();">
-            <option value="-"></option>
-            <option value="celsius">C°</option>
-            <option value="fahrenheit">F°</option>
-            <option value="kelvin">K°</option>
-        </select>
-    </section>
+        <div class="container">
+          <section class="seccion-1">
+            <form class="temperatura-1" action="/">
+              <label for="temperatura"
+                >Escribe el valor de la temperatura y elige si es celsius,
+                fahrenheit o kelvin</label
+              >
+              <input type="number" id="temperatura" />
+              <select
+                name="gradosIniciales"
+                id="gradosIniciales"
+                onchange="seleccion();"
+              >
+                <option value="-">-----</option>
+                <option value="celsius">C°</option>
+                <option value="fahrenheit">F°</option>
+                <option value="kelvin">K°</option>
+              </select>
+            </form>
+          </section>
 
-    <button type="button" onclick="convertir()">Convertir</button>
-</form>
-</main>
-</body>
-<script src="./temperatura.js"></script>
+          <section class="seccion-2">
+            <form class="temperatura-2" action="/">
+              <label for="gradosFinales"
+                >Elige la que temperatura a la que deseas convertir</label>
+              <p id="Resultado"></p>
+              <select
+                name="gradosFinales"
+                id="gradosFinales"
+                onchange="tFinal();"
+              >
+                <option value="-">------</option>
+                <option value="celsius">C°</option>
+                <option value="fahrenheit">F°</option>
+                <option value="kelvin">K°</option>
+              </select>
+            </form>
+          </section>
+
+          <button type="button" onclick="convertir()">Convertir</button>
+      </main>
+  </body>
+  <script src="./temperatura.js"></script>
 </html>

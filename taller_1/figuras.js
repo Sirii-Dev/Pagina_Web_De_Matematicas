@@ -40,7 +40,7 @@ function calcularPerimetroCuadrado() {
   let resultado = perimetroCuadrado(value);
 
   let inputCuadrado = document.getElementById("ResultadoCuadrado");
-  inputCuadrado.innerText = `El perimetro del cuadrado es ${resultado}cm`;
+  inputCuadrado.innerText = `El perimetro del cuadrado es de ${resultado}cm`;
 }
 
 function calcularAreaCuadrado() {
@@ -49,7 +49,7 @@ function calcularAreaCuadrado() {
   let resultado = areaCuadrado(value);
 
   let inputCuadrado= document.getElementById("ResultadoCuadrado");
-  inputCuadrado.innerText = `El área del cuadrado es ${resultado}cm²`;
+  inputCuadrado.innerText = `El área del cuadrado es de ${resultado}cm²`;
 }
 
 //Interaccion para el triangulo
@@ -66,7 +66,7 @@ function calcularPerimetroTriangulo(){
   let resulado = perimetroTriangulo(valueA, valueB, valueC);
 
   let inputTriangulo = document.getElementById("ResultadoTriangulo");
-  inputTriangulo.innerText = `El perimetro del triangulo es ${resulado}cm`
+  inputTriangulo.innerText = `El perimetro del triangulo es de ${resulado}cm`
 }
 
 function calcularAreaTriangulo(){
@@ -79,7 +79,7 @@ function calcularAreaTriangulo(){
   let resulado = areaTriangulo(valueBase, valueAltura);
 
   let inputTriangulo = document.getElementById("ResultadoTriangulo");
-  inputTriangulo.innerText = `El área del triangulo es ${resulado}cm²`
+  inputTriangulo.innerText = `El área del triangulo es de ${resulado}cm²`
 }
 
 
@@ -108,7 +108,7 @@ function calcularAlturaTriangulo() {
   let resultado= document.getElementById(
     "ResultadoTriangulo"
   );
-  resultado.innerText = `La altura es de ${altura} cm`;
+  resultado.innerText = `La altura es del triangulo es de ${altura}cm`;
 }
 
 
@@ -120,7 +120,7 @@ function calcularPerimetroCirculo(){
   let resultado = perimetroCirculo(valueRadio);
 
   let inputCirculo = document.getElementById("ResultadoCirculo");
-  inputCirculo.innerText = `El perimetro del circulo es ${resultado}cm`;
+  inputCirculo.innerText = `El perimetro del circulo es de ${resultado}cm`;
 }
 
 function calcularAreaCirculo(){
@@ -131,5 +131,5 @@ function calcularAreaCirculo(){
   resultado = resultado.toFixed(2);
 
   let inputCirculo = document.getElementById("ResultadoCirculo");
-  inputCirculo.innerText = `El área del circulo es ${resultado}cm²`;
+  inputCirculo.innerText = `El área del circulo es de ${resultado}cm²`;
 }

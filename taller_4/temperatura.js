@@ -46,9 +46,9 @@ function convertir() {
     resultado = (valorNumerico - 273.15) * 1.8 + 32;
     resultado = resultado.toFixed(2);
   } else {
-    resultado = "Ingresa un valor, el tipo de temperatura inicial y final";
+    resultado = "invalido";
   }
 
   let resultadoFinal = document.getElementById("Resultado");
-  resultadoFinal.innerText = resultado + "°";
+  resultadoFinal.innerText = resultado;
 }
